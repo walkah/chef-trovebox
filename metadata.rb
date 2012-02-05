@@ -6,7 +6,7 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "0.0.1"
 recipe           "openphoto", "Installs OpenPhoto"
 
-%w{ apt php apache2 mysql openssl git }.each do |cb|
+%w{ php apache2 mysql openssl git }.each do |cb|
   depends cb
 end
 
