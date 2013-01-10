@@ -16,6 +16,8 @@
 #
 
 include_recipe "git"
+include_recipe "build-essential"
+
 include_recipe %w{apache2 apache2::mod_php5 apache2::mod_rewrite apache2::mod_deflate apache2::mod_expires apache2::mod_headers}
 include_recipe %w{php php::module_mysql php::module_gd php::module_curl php::module_apc}
 include_recipe "mysql::server"
