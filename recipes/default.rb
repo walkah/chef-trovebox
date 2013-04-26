@@ -37,8 +37,10 @@ else
 end
 
 git "#{node[:openphoto][:dir]}" do
-  repository "https://github.com/photo/frontend.git"
-  reference "master"
+  repository node['openphoto']['repository']
+  reference node['openphoto']['branch']
+  user node['openphoto']['user']
+  group node['openphoto']['group']
   action :sync
 end
 

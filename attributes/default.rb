@@ -18,4 +18,8 @@
 
 # General settings
 default['openphoto']['dir'] = "/var/www/openphoto"
+default['openphoto']['repository'] = "https://github.com/photo/frontend.git"
+default['openphoto']['branch'] = "master"
+default['openphoto']['user'] = "openphoto"
+default['openphoto']['openphoto'] = "openphoto"
 default['openphoto']['server_aliases'] = [node['fqdn']]
