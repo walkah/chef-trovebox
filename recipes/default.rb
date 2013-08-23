@@ -41,7 +41,7 @@ git "#{node[:openphoto][:dir]}" do
   reference node['openphoto']['branch']
   user node['openphoto']['user']
   group node['openphoto']['group']
-  action :sync
+  action :checkout
 end
 
 directory "#{node[:openphoto][:dir]}/src/userdata" do
