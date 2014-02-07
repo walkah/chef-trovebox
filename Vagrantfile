@@ -10,14 +10,11 @@ Vagrant.configure("2") do |config|
 
   config.omnibus.chef_version = :latest
 
-  config.ssh.max_tries = 40
-  config.ssh.timeout   = 120
-
   config.berkshelf.enabled = true
 
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
-  config.vm.synced_folder ".", "/vagrant", :extra => "dmode=777,fmode=777"
+  config.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=777","fmode=777"]
 
   config.vm.provision :chef_solo do |chef|
     chef.json = {
